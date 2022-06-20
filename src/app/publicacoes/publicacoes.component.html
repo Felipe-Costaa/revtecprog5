@@ -1,0 +1,47 @@
+<p>publicacoes works!</p>
+
+
+<p>selecione um post especifico</p>
+<form (submit)="unicaPublicacao()">
+    <label for="postIdBusca">Id do post desejado</label>
+    <input type="number" [(ngModel)]="postId" [ngModelOptions]="{standalone: true}" id="postIdBusca" placeholder="Id do post que está procurando">
+    <button>Pesquisar</button>
+</form>
+
+<table *ngIf="postId != 0">
+    <thead>
+        <tr>
+            <th>UserID</th>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Publicação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ novaPublicacao.userId }}</td>
+            <td>{{ novaPublicacao.postId }}</td>
+            <td>{{ novaPublicacao.title }}</td>
+            <td>{{ novaPublicacao.body }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="todos">
+    <thead>
+        <tr>
+            <th>UserID</th>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Publicação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let publicacoes of listaPublicacoes">
+            <td>{{ publicacoes.userId }}</td>
+            <td>{{ publicacoes.postId }}</td>
+            <td>{{ publicacoes.title }}</td>
+            <td>{{ publicacoes.body }}</td>
+        </tr>
+    </tbody>
+</table>

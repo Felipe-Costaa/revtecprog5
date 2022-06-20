@@ -1,0 +1,25 @@
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+    transition: ease-in, 0.3s;
+}
+
+nav {
+    background-color: rgb(121, 121, 245);
+}
+
+p {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 5px;
+    font-weight: bold;
+}
