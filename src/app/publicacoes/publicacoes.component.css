@@ -10,3 +10,15 @@ th {
 #todos {
     margin-top: 20px;
 }
+
+.botoes {
+    margin: 15px;
+    margin-left: 0;
+}
+
+.busca {
+    margin: 20px;
+    margin-left: 0px;
+    border: 1px black solid;
+    padding: 10px;
+}

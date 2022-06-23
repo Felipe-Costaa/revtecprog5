@@ -22,4 +22,8 @@ private urlAPI = 'https://jsonplaceholder.typicode.com/posts'
     return this.httpClient.get<publicacoes>(this.urlAPI + '/' + postId)
   }
 
+  deletePublicacao(postId: number){
+    this.httpClient.delete(this.urlAPI + '/post' + postId)
+  }
+
 }

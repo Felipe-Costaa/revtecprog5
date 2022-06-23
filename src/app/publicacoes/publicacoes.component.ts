@@ -10,7 +10,7 @@ import { PublicacoesService } from './publicacoes.service';
 export class PublicacoesComponent implements OnInit {
 
   listaPublicacoes: publicacoes[] = []
-  novaPublicacao: publicacoes = {} as publicacoes
+  Publicacao: publicacoes = {} as publicacoes
   postId: number = 0
 
 
@@ -24,7 +24,11 @@ export class PublicacoesComponent implements OnInit {
 
   unicaPublicacao(){
     this.service.getPublicacaoById(this.postId).subscribe(item =>
-      this.novaPublicacao = item)
+      this.Publicacao = item)
   }
 
+  removePublicacao(){
+    this.service.deletePublicacao(this.postId)
+    alert("Post " + this.postId + " removido com sucesso!")
+  }
 }
